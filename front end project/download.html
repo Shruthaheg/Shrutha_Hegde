@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Certificate Generator</title>
+<link rel="stylesheet" href="css.css">
+  <style>
+.background{
+background:rgba(0,0,0,0.68) url('uiback.jpg');
+background-size:cover;
+background-blend-mode:darken;
+background-repeat:no-repeat;
+}
+.form56{
+padding: 8px;
+width: 30%;
+}
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #certificate {
+      width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #333;
+      
+    }
+
+    #nameInput {
+      margin-bottom: 20px;
+    }
+.btn {
+    padding: 5px;
+    margin: 7px 2px;
+    border: 2px solid grey;
+    border-radius: 8px;
+    font-size: 14px;
+    background: none;
+    color: grey;
+    cursor: pointer;
+
+  </style>
+  <!-- Include html2canvas library -->
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+<div class ="navbar background hnav-rsp">
+<ul class=" navlist vclass-rsp">
+<div class ="logo"> 
+<img src= "elixir.jpg" alt="logo">
+</div>
+<li><a href="index.html"> Home </a></li>
+<li><a href="aboutus.html"> About us</a></li>
+<li><a href="course0.html">Courses</a></li>
+<li> <a href="prem.html"> Premium </a></li>
+</ul>
+<div class ="rightnav vclass-rsp">
+<input type="text" name="search" id="search">
+<button class="btn btnsm"> Search </button>
+</div>
+</div>
+<div class="burger">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<script type="text/javascript">
+burger=document.querySelector('.burger') //returns the first element that matches the specified selectors//
+navbar=document.querySelector('.navbar')
+navlist=document.querySelector('.navlist')
+rightnav=document.querySelector('.rightnav')
+
+burger.addEventListener('click',()=>{
+rightnav.classList.toggle('vclass-rsp'); //checks the visibilty show of the element//
+navlist.classList.toggle('vclass-rsp');
+navbar.classList.toggle('hnav-rsp');
+})
+</script>
+</div>
+</nav>
+<section class="background fsection">
+<div class="box-main">
+<div class="fhalf">
+<p class="text-big">Completiton Certificate ! </p>
+<p class="text-small">Download your free certificate after entering your name in the input feild ! </p>
+
+</section>
+
+<div  id="certificate">
+    <h1>Certificate of Completion</h1><br>
+    <p>This is to certify that</p><br>
+    <h2 id="certificateName">[Name]</h2><br>
+    <p>has successfully completed the course</p><br>
+    <p>From ELIXIR online platform.</p><br>
+  </div>
+
+  <div id="nameInput">
+    <label for="name">Enter your name: </label>
+    <input  class="form56" type="text" id="name" placeholder="Your Name">
+    <button class="btn" onclick="generateCertificate()">Generate Certificate</button>
+  </div>
+  
+
+  <script>
+    function generateCertificate() {
+      var nameInput = document.getElementById("name").value;
+      var certificateName = document.getElementById("certificateName");
+      certificateName.textContent = nameInput || "[Name]";
+
+      // Use html2canvas to capture the certificate div
+      html2canvas(document.getElementById("certificate")).then(function(canvas) {
+        // Convert the canvas to a data URL
+        var dataUrl = canvas.toDataURL("image/png");
+
+        // Create a link and trigger a download
+        var a = document.createElement("a");
+        a.href = dataUrl;
+        a.download = "certificate.png";
+        a.click();
+      });
+    }
+  </script>
+<section class="contact"> 
+<h1 class="textcenter">  Any concerns ? Contact us .</h1>
+<div class="form" style="margin-left:90px">
+<input class="form-input" type="text" name="name" id="name" placeholder="Enter your name">
+<input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your phone number">
+<input class="form-input" type="text" name="email" id="email" placeholder="Enter your email">
+<textarea class="form-input" type="text" name="text" id="text" placeholder="Enter your concern" cols="30" row="20"></textarea><br>
+<button class="btn-dark" onclick="myFunc()">Submit</button>
+</div>
+<script>
+function myFunc(){
+alert("You'r concern is sent successfully ! We'll try to help you as soon as possible !");
+}
+function test(){
+open("test.html");
+}
+</script>
+</section>
+<footer class="background">
+<p class="textfooter"> Copyright &copy; 2029 elixir.com - All rights are reserved</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<metaname="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elixer-A magical online potion</title>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class ="navbar background hnav-rsp">
+<ul class=" navlist vclass-rsp">
+<div class ="logo"> 
+<img src= "elixir.jpg" alt="logo">
+</div>
+<li><a href="index.html"> Home </a></li>
+<li><a href="aboutus.html"> About us</a></li>
+<li><a href="course0.html">Courses</a></li>
+<li> <a href="prem.html"> Premium </a></li>
+</ul>
+<div class ="rightnav vclass-rsp">
+<input type="text" name="search" id="search">
+<button class="btn btnsm"> Search </button>
+</div>
+</div>
+<div class="burger">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<script type="text/javascript">
+burger=document.querySelector('.burger') //returns the first element that matches the specified selectors//
+navbar=document.querySelector('.navbar')
+navlist=document.querySelector('.navlist')
+rightnav=document.querySelector('.rightnav')
+
+burger.addEventListener('click',()=>{
+rightnav.classList.toggle('vclass-rsp'); //checks the visibilty show of the element//
+navlist.classList.toggle('vclass-rsp');
+navbar.classList.toggle('hnav-rsp');
+})				</script>
+</div>
+</nav>
+<section class="background fsection">
+<div class="box-main">
+<div class="fhalf">
+<p class="text-big">Elixir: A magical online potion.</p>
+<p class="text-small">Elixir is a online platform that lets you learn , master and get certified in your intrested course.Learn extra skills that may help you during the interview or perform better in exams than others.</p>
+<div class="button"><a href="login.html"><button class="btn" href="login.html"> Login</button></a> </div> 
+</div>
+<div class="shalf">
+<img src="elixir.jpg" alt="logo">
+</div>
+</section>
+<section class=" section secright">
+<div class="para">
+<p class="text-big"><br> We got everything you've been looking for!! </p>
+<p class="text-small">Whether you're just starting out or already have some experience, we offer various Free courses designed to fit your needs. Curated from top educational institutions and industry leaders, our selection of Free courses aims to provide quality training for everyone—from individual learners seeking personal growth to corporate teams looking to upskill.Professional Certificates help students demonstrate to employers that they are qualified and job-ready.The quest for continuous learning has never been more crucial. Whether you're looking to advance your career, explore new interests, or simply sharpen your existing skills,  is here to empower you on your educational journey.</p></div>
+<div class="thumbnail"> <img src="thumb.jpg" alt="course"  width="350" height="300" class="imgFluid"> </div>
+</section>
+
+<section class="section secleft">
+<div class="para">
+<p class="text-big">Flexible Learning </p>
+<p class="text-small"> Access courses anytime, anywhere, and at your own pace. No rigid schedules or deadlines.Flexible Learning is a set of educational philosophies and systems, concerned with providing learners with increased choice, convenience, and personalisation to suit the learner. In particular, flexible learning provides learners with choices about where, when, and how learning occurs.Concerned with providing learners with increased choice, convenience, and personalisation to suit the learner. In learning environments that are designed for flexibility, students may be observed learning while lying down on the carpet or sitting at low tables, on soft seating, or in beanbag chairs. Students may work alone or with a group. </p></div>
+<div class="thumbnail"> <img src="thumb6.jpg" alt="course"  width="350" height="300" class="imgFluid"> </div>
+</section>
+
+<section class=" section secright">
+<div class="para">
+<p class="text-big"> Expert Instructors</p>
+<p class="text-small">Learn from industry-leading professionals and educators with a wealth of practical knowledge and experience.An expert teacher makes careful plans, but remains flexible.Working with other teachers to refine lesson plans leads to better learning for students. When teachers work together, they are more likely to identify the points of confusion and plan a sequence of events that help avoid student misconceptions.The fundamental quality of an expert teacher is the ability to have a positive influence on student outcomes.” Expert teachers can identify the most important ways in which to represent the subject they teach.” </p></div>
+<div class="thumbnail"> <img src="thumb7.jpg" alt="course" width="350" height="300" class="imgFluid"> </div>
+</section>
+
+<section class="section secleft">
+<div class="para">
+<p class="text-big">Interactive Content </p>
+<p class="text-small">Engage with dynamic multimedia content, including videos, quizzes, assignments, and interactive simulations.Interactive content is any type of material that conveys its message by encouraging user participation. Because of it, the content experience evolves from passive consumption to active engagement. Quizzes, ebooks, videos, and animated infographics. Interactive content requires active engagement of your audience by exploring scenarios, answering questions, clicking.Opposed to static content, Interactive content is a mix between relevant and educational content and visual, entertaining and dynamic content.It refers to the ways in which people process and share information or how they communicate with each other.
+</p></div>
+<div class="thumbnail"> <img src="thumb8.jpg" alt="course"  width="350" height="300" class="imgFluid"> </div>
+</section>
+<section class="contact"> 
+<h1 class="textcenter"> Need help ? Contact us.</h1>
+<div class="form">
+<input class="form-input" type="text" name="name" id="name" placeholder="Enter your name">
+<input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your phone number">
+<input class="form-input" type="text" name="email" id="email" placeholder="Enter your email">
+<textarea class="form-input" type="text" name="text" id="text" placeholder="Enter your concern" cols="30" row="20"></textarea><br>
+<button class="btn-dark" onclick="myFunc()">Submit</button>
+</div>
+<script>
+function myFunc(){
+alert("Your concern is sent successfully !");
+open("aboutus.html");
+}
+</script>
+</section>
+<footer class="background">
+<p class="textfooter"> Copyright &copy; 2029 elixir.com - All rights are reserved</p>
+</footer>
+</body>
+</html>

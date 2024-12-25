@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<metaname="viewport" content="width=device-width, initial-scale=1.0">
+<title>free course</title>
+<link rel="stylesheet" href="css.css">
+<style>
+.background{
+background:rgba(0,0,0,0.68) url('uiback.jpg');
+background-size:cover;
+background-blend-mode:darken;
+background-repeat:no-repeat;
+}
+
+.next li a{
+text-decoration:none;
+color:black;
+}
+.next {
+width:100%;
+transition:all 0.5s ease-out;
+}
+.list{
+font-size:18px;
+line-height:1.8;
+}
+.certi{
+margin-left:50px;
+width:90%;
+height:110px;
+border:1px solid grey;
+}
+.course1{
+height:100vh;
+width:100%;
+background:rgba(0,0,0,0.7);
+}
+.course2{
+width: 99%;
+height: 8vh;
+color: whitesmoke;
+margin: auto;
+padding-top: 32px;
+}
+.course2:hover{
+background:rgba(0,0,0,0.55);
+cursor:pointer;
+}
+.head{
+color: white;
+padding: 25px;
+font-size: larger;
+font-weight: bold;
+}
+.art{
+text-decoration:none;
+color:whitesmoke;
+}
+.main{
+width:73%;
+display:flex;
+flex-direction:column;
+}
+.refer{
+height:1100px;
+}
+.book{
+width:25%;
+height:600px;
+border:1px solid grey;
+margin:50px;
+float:left;
+}
+.desp{
+height: 9%;
+margin-top: 20px;
+font-size: large;
+font-weight: 600;
+}
+.study{
+height:650px;
+width:100%;
+}
+.text-big{
+text-align:center;
+margin-top:70px;
+}	
+.video{
+float: left;
+border: 1px solid grey;
+margin: 40px;
+}
+.text{
+font-size:x-large;
+text-align:justify;
+}
+.btn1{
+margin-left:90px;
+margin-bottom:90px;
+height:60px;
+width:30%;
+border:none;
+font-size:16px;
+font-weight:400;
+border-radius:7px;
+background-color:#0171d3;
+color:white;
+transition:all 0.3s ease;
+cursor:pointer;
+}
+.btn1:hover{
+cursor:pointer;
+background-color:#16dcb;
+}		
+</style>
+</head>
+<body>
+<div class ="navbar background hnav-rsp">
+<ul class=" navlist vclass-rsp">
+<div class ="logo"> 
+<img src= "elixir.jpg" alt="logo">
+</div>
+<li><a href="index.html"> Home </a></li>
+<li><a href="aboutus.html"> About us</a></li>
+<li><a href="course0.html">Courses</a></li>
+<li> <a href="prem.html"> Premium </a></li>
+</ul>
+<div class ="rightnav vclass-rsp">
+<input type="text" name="search" id="search">
+<button class="btn btnsm"> Search </button>
+</div>
+</div>
+<div class="burger">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+<script type="text/javascript">
+burger=document.querySelector('.burger') //returns the first element that matches the specified selectors//
+navbar=document.querySelector('.navbar')
+navlist=document.querySelector('.navlist')
+rightnav=document.querySelector('.rightnav')
+
+burger.addEventListener('click',()=>{
+rightnav.classList.toggle('vclass-rsp'); //checks the visibilty show of the element//
+navlist.classList.toggle('vclass-rsp');
+navbar.classList.toggle('hnav-rsp');
+})
+</script>
+</div>
+</nav>
+<section class="background fsection">
+<div class="box-main">
+<div class="fhalf">
+<p class="text-big">UI/UX Designing </p>
+<p class="text-small">Design High-Impact User Experiences. Research, design, and prototype effective, visually-driven websites and apps.Taught in English. Some content may not be translated <br> Instructors for this course are : Michael Worthington ,Roman Jaster.
+Instructors: Michael Worthington </p>
+</section>
+<nav>
+<div class ="navbar next hnav-rsp">
+<ul class=" navlist next vclass-rsp">
+<li><a href="#about"> About</a></li>
+<li><a href="#outcome"> Outcomes</a></li>
+<li><a href="#study">Study Material</a></li>
+<li><a href="#refer">Referential videos</a></li>
+<li><a href="#quiz">Quiz</a></li> 
+<li> <a href="#contact"> Contact us </a></li>
+</ul>
+</nav>
+<section class="section secright" id="about">
+<div class="para">
+<p class="text-big">UI/UX design</p><p class="text-small"> It is all about identifying and solving user problems; UI design is all about creating intuitive, aesthetically-pleasing, interactive interfaces. UX design usually comes first in the product development process, followed by UI.UI/UX design is one among numerous non-technical roles in tech that doesn't require any coding or programming skills. However, having previous experience in coding or programming skills is beneficial as communicating with developers is made easier. Learning UX design can often be challenging. How difficult you'll find it to learn UX design, however, often depends on whether you're transitioning into it from a design background or a development background, or whether you have no experience in either.</p></div>
+<div class="thumbnail"> <img src="free1.jpg" alt="course"  width="350" height="300" class="imgFluid"> </div>
+</section>
+<hr style="height:2px; color:grey">
+<section class="section secleft" id="outcome">
+<div class="para">
+<p class="text-big">Advance your subject-matter expertise in UI/UX design</p><p class="text-small">
+<ul class="list"><li>Learn in-demand skills from university and industry experts</li>
+<li>Master a subject or tool with hands-on projects</li>
+<li>Develop a deep understanding of key concepts</li>
+<li>Earn a career certificate from California Institute of the Arts</li></ul>
+</p></div>
+</section>
+<img src="certi.png" style="width:100%; height=110px;">
+<hr style="height:2px; color:grey">
+
+<section class="section secleft" id="study">
+<div class="para">
+<p class="text-big">Study Materials</p><p class="text-small">Completely study all the three pdf files given below. </p></div>
+<div class="thumbnail"> <img src="books.jpg" alt="course"  width="250" height="200" class="imgFluid"> </div>
+</section>
+<section class="study" id="study">
+<div class="book"><a href="book1.html"><img src="cover1.jpg" style="width:100%; height:100%"> </a> 
+<div class="desp">UNIT-1 Introduction to UX and UI Designs </div>
+</div>
+<div class="book"><a href="book2.html"><img src="cover2.jpg" style="width:100%; height:100%"> </a> 
+<div class="desp">UNIT-2 UX designing-advanced </div>
+</div>
+<div class="book"><a href="book3.html"><img src="cover3.webp" style="width:100%; height:100%"> </a> 
+<div class="desp">UNIT-3 Final chapter for asucceasful UX design</div>
+</div>
+</section><br><br><br>
+<br><br>
+<hr style="height:2px; color:grey">
+<section class="refer"  id="refer">
+<div class="para">
+<p class="text-big">Referential videos </p><p class="text-small text">Watch the below given videos for your better understanding.Viewers have to click the link to view the complete description. The second part of the description can have other info about your channel so that viewers can learn more.</p></div>
+<div class="video"> <iframe width="660" height="415" src="https://www.youtube.com/embed/videoseries?si=4JB8yflBL3AV1-7X&amp;list=PLVlQHNRLflP_5_vCknMsxLS-mTJgq1QzH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<div class="video"><iframe width="660" height="415" src="https://www.youtube.com/embed/videoseries?si=EOZfQt3qyRTSfuGB&amp;list=PLW-zSkCnZ-gBtmXf9AfRbA90GnBv7o2gS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<div class="video"><iframe width="660" height="415" src="https://www.youtube.com/embed/spGDKJNq-EE?si=_0uXOKBqNavBw-BP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="video"><iframe width="660" height="415" src="https://www.youtube.com/embed/I0-vBdh4sZ8?si=YLWxH1XbBPnqm17E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</section><br><br><br><br><br><br>
+<hr style="height:2px; color:grey">
+<section class="section secright" id="quiz">
+<div class="para">
+<p class="text-big">Test Yourself !</p><p class="text-small text">Tests and quizzes have always been a motivator to study harder when students know that their progress will be judged upon an exam, a performance review etc. It sets a deadline for when material needs to be learned by and diligent students know they must adhere to that. </p></div>
+<div class="thumbnail"> <img src="test.png" alt="course"  width="350" height="300" class="imgFluid"> </div>
+</section>
+<button class="btn1" onclick="test()"> Take test</button>
+</section>
+<section class="contact"> 
+<h1 class="textcenter"> Have Queries ? Contact us.</h1>
+<div class="form">
+<input class="form-input" type="text" name="name" id="name" placeholder="Enter your name">
+<input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your phone number">
+<input class="form-input" type="text" name="email" id="email" placeholder="Enter your email">
+<textarea class="form-input" type="text" name="text" id="text" placeholder="Enter your concern" cols="30" row="20"></textarea><br>
+<button class="btn-dark" onclick="myFunc()">Submit</button>
+</div>
+<script>
+function myFunc(){
+alert("You'r doubt is sent successfully ! We'll try to help you as soon as possible !");
+}
+function test(){
+open("test.html");
+}
+</script>
+</section>
+<footer class="background">
+<p class="textfooter"> Copyright &copy; 2029 elixir.com - All rights are reserved</p>
+</footer>
+</body>
+</html>
+
+

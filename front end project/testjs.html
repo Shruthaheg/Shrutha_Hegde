@@ -1,0 +1,199 @@
+const quizData = [
+  {
+    question: 'Which of the following does design to take into account?',
+    options: ['Color', 'Shape', 'Size', 'All of the above'],
+    answer: 'All of the above',
+  },
+  {
+    question: 'What are monochromatic colors?',
+    options: ['Black and white', 'grey', 'all shades', 'Both a and b'],
+    answer: 'Both a and b',
+  },
+  {
+    question: 'what is the charecterstic feature of a wireframe?',
+    options: ['shows main chunk', 'draws outline', 'depicts basic ui', 'all of the above'],
+    answer: 'all of the above',
+  },
+  {
+    question: 'Why should a UXZ designer start wqith a paper prototyping?',
+    options: ['You can Quickly change things', 'Expensive', 'decreases creative freedom', 'easy to learn curves'],
+    answer: 'You can Quickly change things',
+  },
+  {
+    question: 'Which of the following is the part of UX research ?',
+    options: [
+      'Quantitative analysis',
+      'Qualitative analysis',
+      'Testing ',
+      'All of the above',
+    ],
+    answer: 'All of the above',
+  },
+  {
+    question: 'Which of the following is the hueristic law?',
+    options: ['Visibility of system status', 'User control freedom', 'Error recognition', 'Consistency'],
+    answer: 'Error recognition',
+  },
+  {
+    question: 'Which of the following is not the part of empathy map?',
+    options: [
+      'Think and feel',
+      'Hear',
+      'Gain creators',
+      'do',
+    ],
+    answer: 'Gain creators',
+  },
+  {
+    question: 'Which of the folloqwing is not a primary color?',
+    options: ['red', 'yellow', 'green', 'blue'],
+    answer: 'green',
+  },
+  {
+    question: 'What is the solution of empathy map?',
+    options: [
+      'Journey map',
+      'User persona',
+      'Value proposition',
+      'Informative',
+    ],
+    answer: 'Value proposition',
+  },
+  {
+    question: 'Which of the followqing is not an ezxample for quantitative research ?',
+    options: ['Card sorting', 'A/B testing', 'Surveys', 'Focus groups'],
+    answer: 'Focus groups',
+  },
+];
+
+const quizContainer = document.getElementById('quiz');
+const resultContainer = document.getElementById('result');
+const submitButton = document.getElementById('submit');
+const retryButton = document.getElementById('retry');
+const showAnswerButton = document.getElementById('showAnswer');
+const downloadButton = document.getElementById('download');
+
+let currentQuestion = 0;
+let score = 0;
+let incorrectAnswers = [];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function displayQuestion() {
+  const questionData = quizData[currentQuestion];
+
+  const questionElement = document.createElement('div');
+  questionElement.className = 'question';
+  questionElement.innerHTML = questionData.question;
+
+  const optionsElement = document.createElement('div');
+  optionsElement.className = 'options';
+
+  const shuffledOptions = [...questionData.options];
+  shuffleArray(shuffledOptions);
+
+  for (let i = 0; i < shuffledOptions.length; i++) {
+    const option = document.createElement('label');
+    option.className = 'option';
+
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'quiz';
+    radio.value = shuffledOptions[i];
+
+    const optionText = document.createTextNode(shuffledOptions[i]);
+
+    option.appendChild(radio);
+    option.appendChild(optionText);
+    optionsElement.appendChild(option);
+  }
+
+  quizContainer.innerHTML = '';
+  quizContainer.appendChild(questionElement);
+  quizContainer.appendChild(optionsElement);
+}
+
+function checkAnswer() {
+  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+  if (selectedOption) {
+    const answer = selectedOption.value;
+    if (answer === quizData[currentQuestion].answer) {
+      score++;
+    } else {
+      incorrectAnswers.push({
+        question: quizData[currentQuestion].question,
+        incorrectAnswer: answer,
+        correctAnswer: quizData[currentQuestion].answer,
+      });
+    }
+    currentQuestion++;
+    selectedOption.checked = false;
+    if (currentQuestion < quizData.length) {
+      displayQuestion();
+    } else {
+      displayResult();
+    }
+  }
+}
+
+function displayResult() {
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+ downloadButton.style.display = 'inline-block';
+  showAnswerButton.style.display = 'inline-block';
+  resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+}
+function download(){
+open('download.html');
+}
+
+function retryQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  incorrectAnswers = [];
+  quizContainer.style.display = 'block';
+  submitButton.style.display = 'inline-block';
+  retryButton.style.display = 'none';
+  downloadButton.style.display = 'none';
+showAnswerButton.style.display = 'none';
+  resultContainer.innerHTML = '';
+  displayQuestion();
+}
+
+function showAnswer() {
+  quizContainer.style.display = 'none';
+  submitButton.style.display = 'none';
+  retryButton.style.display = 'inline-block';
+    downloadButton.style.display = 'inline-block';
+showAnswerButton.style.display = 'none';
+
+  let incorrectAnswersHtml = '';
+  for (let i = 0; i < incorrectAnswers.length; i++) {
+    incorrectAnswersHtml += `
+      <p>
+        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      </p>
+    `;
+  }
+
+  resultContainer.innerHTML = `
+    <p>You scored ${score} out of ${quizData.length}!</p>
+    <p>Incorrect Answers:</p>
+    ${incorrectAnswersHtml}
+  `;
+}
+
+submitButton.addEventListener('click', checkAnswer);
+retryButton.addEventListener('click', retryQuiz);
+showAnswerButton.addEventListener('click', showAnswer);
+downloadButton.addEventListener('click', download);
+
+displayQuestion();

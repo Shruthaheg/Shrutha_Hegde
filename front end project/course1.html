@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<style>
+.course1{
+height:100vh;
+width:100%;
+background:rgba(0,0,0,0.7);
+}
+.course2{
+width: 99%;
+height: 8vh;
+color: whitesmoke;
+margin: auto;
+padding-top: 32px;
+}
+.course2:hover{
+background:rgba(0,0,0,0.55);
+
+}
+.head{
+color: white;
+padding: 25px;
+font-size: larger;
+font-weight: bold;
+}
+.art{
+text-decoration:none;
+color:whitesmoke;
+}
+.main{
+width:73%;
+display:flex;
+flex-direction:column;
+}
+</style>
+</head>
+<body>
+<section class="course">
+<section class="course1">
+<header class="head"> <a href="index.html" style="text-decoration: none; color:aliceblue;" target="_blank">Back to index</a></header>
+<hr style="color:white">
+<div class="course2"><input type="radio" name="stream" value="arts" onclick="art()" target="right">Arts and Humanities</div>
+<div class="course2"><input type="radio" name="stream" value="busines" onclick="bus()">Business</div>
+<div class="course2"><input type="radio"  name="stream" value="data" onclick="data()">Data science</div>
+<div class="course2"><input type="radio" name="stream" value="IT" onclick="it()">IT and engineering</a> </div>
+<div class="course2"><input type="radio" name="stream" value="market" onclick="market()" >Marketting</a></div>
+</section>
+<script>
+function art(){
+open('arts.html','right');
+}
+function bus(){
+open('bus.html','right');
+}
+function data(){
+open('data.html','right');
+}
+function it(){
+open('IT.html','right');
+}
+function market(){
+open('bus.html','right');
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+</section>

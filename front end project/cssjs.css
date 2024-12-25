@@ -1,0 +1,141 @@
+*{
+margin:0;
+padding:0px;
+font-family:'Segoe UI',tahoma,geneva,verdana,sans-serif;
+
+}
+.container-forms {
+    height:100vh;
+    width: 45%;
+    display:flex;
+    justify-content:right;
+    align-items:center;
+    }
+.background{
+background:rgba(0,0,0,0.68) url('background0.jpg');
+background-size:cover;
+background-blend-mode:darken;
+background-repeat:no-repeat;
+}
+.form -content{
+max-width:430px;
+width:80%;
+padding:30px;
+border-radius:8px;
+background:#FFF;
+padding:12px;
+}
+.form{
+border-radius:10px;
+background:#FFF;
+max-width:430px;
+width:100%;
+padding:0px;
+}
+.heading{
+font-weight: bold;
+text-align: center;
+padding-bottom: 10px;
+font-size: 27px;
+}
+.form {
+border: 2px solid black;
+height: auto;
+max-width:430px;
+width:70%;
+padding:30px;
+border-radius:28px;
+background:#FFF;
+margin:auto;
+margin-top:30px;
+}
+.field{
+    position:relative;
+    padding-bottom:0px;
+    width:100%;
+    margin-top:0px;
+    }
+.field input{
+outline:none;
+height:10%;
+width:100%;
+padding:0 15px;
+border:1px solid grey;
+font-size:16px;
+font-weight:400;
+border-radius:7px;
+}
+.field input:focus{
+border-bottom-width:2px;
+}
+.form-link{
+text-align:center;
+margin-top:10px;
+}
+.field button{
+    height: 90px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 7px;
+    background-color: #0171d3;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.field button:hover{
+cursor:pointer;
+background-color:#16dcb;
+}
+.form-link span,
+.form-link span a{
+ font-size:14px;
+font-weight:400;
+color:#232837;
+}
+.form a{
+color:#0171d3;
+text-decoration:none;
+}
+.form a:hover{
+text-decoration:underline;
+}
+.form-register {
+border: 2px solid black;
+height: 90vh;
+max-width:430px;
+width:70%;
+padding:30px;
+border-radius:28px;
+background:#FFF;
+margin:auto;
+margin-top:20px;
+border-radius:10px;
+background:#FFF;
+max-width:430px;
+width:100%;
+padding:30px;
+}
+.eye-icon{
+position:absoulute;
+top:50%;
+right:10px;
+transform:translateY(-50%);
+font-size:18px;
+color:#8b8b8b;
+cursor:pointor;
+padding:5px;
+}
+.forms.register{
+opacity:0;
+pointer-events:none;
+}
+.forms.show-register.form.register{
+opacity:0;
+pointer-events:none;
+}
+.forms.show-register.form.login{
+opacity:0;
+pointer-events:none;
+}
